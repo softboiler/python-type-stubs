@@ -3,6 +3,8 @@ from typing import Any, TypeVar, dataclass_transform, overload
 
 from cappa.help import HelpFormatable
 
+def __getattr__(name: str) -> Any: ...  # pyright: ignore[reportIncompleteStub]
+
 _T = TypeVar("_T")
 
 @dataclass_transform()
